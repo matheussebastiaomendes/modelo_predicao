@@ -4,10 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectKBest, f_regression
 
-from src.preprocessing import (
-    clean_data,
-    create_preprocessor
-)
+from src.preprocessing import clean_data
+
+from src.ml_preprocessing import create_preprocessor
 
 from src.models import get_models
 
@@ -16,7 +15,7 @@ from src.evaluate import evaluate_model
 
 # 1. Carregar
 df = pd.read_csv(
-    "data/preco_carros.csv"
+    "dados/preco_carros.csv"
 )
 
 # 2. Limpar
